@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIColor {
-    public static var testColor: UIColor = {
+    static var customBackgorundColor: UIColor = {
         if #available(iOS 13, *) {
             return UIColor { (UITraitCollection: UITraitCollection) -> UIColor in
                 if UITraitCollection.userInterfaceStyle == .dark {
@@ -17,8 +17,6 @@ extension UIColor {
                     return .white
                 }
             }
-        } else {
-            return .white
         }
     }()
 }
